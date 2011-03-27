@@ -17,7 +17,7 @@ class ZB_Presenter_default extends ZB_Presenter_Common
 	{
 		$path = ZB_BASE_PATH.'/module/'.$this->module->moduleName.'/tpl';
 		$tplFile = $this->module->className.'.tpl';
-		$tplName = "Default";
+		$tplName = "Barna";
 		
 		$tplPath = $path.'/'.$tplFile;
 		$tplPathLeft = 'file:/User/atmaturen/Sites/mvc/module/welcome/tpl/welcome.tpl';
