@@ -10,13 +10,13 @@ class about extends ZB_Auth_No
 	public function __default()
 	{
 	
-		$this->DB->query("SELECT about FROM site WHERE SITE_NAME = '".SITE_NAME."'");
+		$this->DB->query("SELECT `content` FROM `site` WHERE `page_name` = 'about'");
 		
 		if($this->DB->numRows()==1){
 			$results = $this->DB->singleRecord();
-			$GLOBALS['about'] = $results['about'];
+			$GLOBALS['content'] = $results['content'];
 		} else {
-			$GLOBALS['about'] = "cannot connect to database.";
+			$GLOBALS['content'] = "cannot connect to database.";
 		}
 	}
 

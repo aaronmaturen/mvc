@@ -1,3 +1,3 @@
 <?php
-echo $GLOBALS['about'];
+echo $GLOBALS['content'];
 ?>
