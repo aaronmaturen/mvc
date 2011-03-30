@@ -10,7 +10,7 @@ class about extends ZB_Auth_No
 	public function __default()
 	{
 	
-		$this->DB->query("SELECT `content` FROM `site` WHERE `page_name` = 'about'");
+		$this->DB->query("SELECT `content` FROM `site` WHERE `class` = 'about'");
 		
 		if($this->DB->numRows()==1){
 			$results = $this->DB->singleRecord();

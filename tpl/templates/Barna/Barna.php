@@ -27,10 +27,7 @@
 		<!-- Site Navigation -->
 		<a class="navigation" href="index.php"> Home </a>
   	<a class="navigation" href="index.php?module=home&class=about"> About </a>
-  	<?php if($_SESSION['usertype'] == 'master'){?>
-  		<a class="navigation" href="index.php?module=admin&class=config"> Site Config </a>
-  	<?php } ?>
-  	
+  	  	
  		<!-- User Navigation-->
  	 	<?php if($_SESSION['username']!==NULL){?>
   		<a class="user" href="index.php?module=user&class=logout"> Logout </a>
@@ -38,6 +35,10 @@
   	<?php } else { ?>
   		<a class="user" href="index.php?module=user&class=login"> Login </a>
   	<?php } ?>
+		<?php if($_SESSION['usertype'] == 'master'){?>
+  		<a class="user" href="index.php?module=admin&class=config&page=<?php echo $_GET['class']; ?>"> Config </a>
+  	<?php } ?>
+
 	</header>
 
 	<div id="main" role="main">
