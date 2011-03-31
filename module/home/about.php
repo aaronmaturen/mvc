@@ -9,12 +9,11 @@ class about extends ZB_Auth_No
 
 	public function __default()
 	{
-	
 		$this->DB->query("SELECT `content` FROM `site` WHERE `class` = 'about'");
 		
 		if($this->DB->numRows()==1){
 			$results = $this->DB->singleRecord();
-			$GLOBALS['content'] = $results['content'];
+			$GLOBALS['content'] = markdown($results['content']);
 		} else {
 			$GLOBALS['content'] = "cannot connect to database.";
 		}

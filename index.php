@@ -1,5 +1,6 @@
 <?php
 require_once('config.php');
+require_once('markdown.php');
 
 session_start();
 $_SESSION['errors'] = array();
